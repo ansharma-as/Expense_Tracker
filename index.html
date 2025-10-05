@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Personal Expense Tracker</h1>
+            <p>Track your spending and manage your budget</p>
+        </header>
+
+        <!-- Statistics Dashboard -->
+        <section class="stats-dashboard">
+            <div class="stat-card">
+                <h3>Total Spent</h3>
+                <p class="stat-value" id="totalSpent">₹0.00</p>
+            </div>
+            <div class="stat-card">
+                <h3>Transactions</h3>
+                <p class="stat-value" id="transactionCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Budget Status</h3>
+                <p class="stat-value" id="budgetStatus">Set Budget</p>
+            </div>
+        </section>
+
+        <!-- Budget Setting (Bonus Feature) -->
+        <section class="budget-section">
+            <div class="budget-input-group">
+                <label for="monthlyBudget">Set Monthly Budget:</label>
+                <input type="number" id="monthlyBudget" placeholder="Enter budget amount" min="0">
+                <button onclick="setBudget()" class="btn-secondary">Set Budget</button>
+            </div>
+        </section>
+
+        <!-- Add Expense Form -->
+        <section class="add-expense-section">
+            <h2>Add New Expense</h2>
+            <form id="expenseForm">
+                <div class="form-group">
+                    <label for="amount">Amount (₹)*</label>
+                    <input type="number" id="amount" step="0.01" min="0.01" required placeholder="0.00">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category*</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date*</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <input type="text" id="description" placeholder="Enter description">
+                </div>
+
+                <button type="submit" class="btn-primary">Add Expense</button>
+            </form>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <h2>Filter Expenses</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="filterCategory">Category:</label>
+                    <select id="filterCategory">
+                        <option value="">All Categories</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterDateFrom">From:</label>
+                    <input type="date" id="filterDateFrom">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterDateTo">To:</label>
+                    <input type="date" id="filterDateTo">
+                </div>
+
+                <button onclick="clearFilters()" class="btn-secondary">Clear Filters</button>
+            </div>
+        </section>
+
+        <!-- Expense List -->
+        <section class="expenses-section">
+            <h2>Your Expenses</h2>
+            <div id="expensesList" class="expenses-list">
+                <p class="no-expenses">No expenses yet. Add your first expense above!</p>
+            </div>
+        </section>
+
+        <!-- Category Breakdown -->
+        <section class="category-breakdown">
+            <h2>Spending by Category</h2>
+            <div id="categoryStats" class="category-stats">
+                <p class="no-data">No data available</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
