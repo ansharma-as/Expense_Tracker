@@ -236,7 +236,7 @@ If I had more time, I would add:
 
 Screenshots are available in the `/screenshots` folder:
 - `dashboard-view.png` - Main dashboard with statistics
-- `expense-list.png` - Expense list with filters
+- `your_expenses_list.png` - Expense list with filters
 - `mobile-view.png` - Responsive mobile layout
 
 ## 🧪 Testing Checklist
