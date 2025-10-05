@@ -206,16 +206,16 @@ I implemented a **Monthly Budget Tracker** with intelligent warnings:
 
 ## ⏱️ Time Spent
 
-- **Planning & Setup**: 15 minutes
-- **HTML Structure**: 20 minutes
-- **CSS Styling**: 45 minutes
-- **Core JavaScript**: 60 minutes
-- **Filtering & Statistics**: 30 minutes
-- **Budget Bonus Feature**: 25 minutes
-- **Testing & Bug Fixes**: 20 minutes
-- **Documentation**: 25 minutes
+- **Planning & Setup**: 10 minutes
+- **HTML Structure**: 5 minutes
+- **CSS Styling**: 5 minutes
+- **Core JavaScript**: 15 minutes
+- **Filtering & Statistics**: 5 minutes
+- **Budget Bonus Feature**: 8 minutes
+- **Testing & Bug Fixes**: 5 minutes
+- **Documentation**: 10 minutes
 
-**Total Time**: ~3 hours 20 minutes
+**Total Time**: ~1 hour 10 minutes
 
 ## 🚀 Future Enhancements
 
